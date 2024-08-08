@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tasks',
@@ -9,7 +9,6 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class TasksComponent {
 
-  @Input({required: true}) name!: String
-  @Output() select = new EventEmitter();
+  @Input({required: true}) name?: String
 
 }
