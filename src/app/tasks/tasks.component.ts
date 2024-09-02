@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { TaskComponent } from "./task/task.component";
-import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-tasks',

@@ -3,20 +3,7 @@
  * input -> Funcion especial
  */
 import { Component, Input, Output, input, computed, signal, EventEmitter } from '@angular/core';
-//import { DUMMY_USERS } from '../dummy-users';
-
-/**
- * Cración de Alias
- * El alias se llama User en el que pondremos las variables id, name y avatar
- * El alias lo usaremos en el objeto Input user 
- */
-type User = {
-  id: string;
-  name: string;
-  avatar: string;
-}
-
-//const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length)
+import { type User } from './user.model';
 
 @Component({
   selector: 'app-user',
