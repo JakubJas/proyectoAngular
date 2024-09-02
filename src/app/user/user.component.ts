@@ -12,15 +12,6 @@ import { type User } from './user.model';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-
-  //Con signal
-  /** 
-   * avatar = input.required<string>();
-   * name = input.required<string>();
-
-   * selectedUser = signal(DUMMY_USERS[randomIndex]);
-   * imagePath = computed(() => 'assets/users/' + this.avatar());
-  */
   
   // Sin signal:
 
@@ -30,7 +21,8 @@ export class UserComponent {
    * 
    * Creacion del objeto user
   */ 
-   @Input({required: true}) user!: User;
+   @Input({ required: true }) user!: User;
+   @Input({ required: true }) selected!: boolean
    @Output() select = new EventEmitter();
 
   get imagePath() {
@@ -39,12 +31,9 @@ export class UserComponent {
 
 
   onSelectUser(){
-    
-    /*const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length)
-    this.selectedUser.set(DUMMY_USERS[randomIndex]);
-    */
 
     this.select.emit(this.user.id);
+
   }
 
 }
