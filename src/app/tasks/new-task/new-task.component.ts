@@ -8,9 +8,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './new-task.component.css'
 })
 export class NewTaskComponent {
-  @Output() addTask = new EventEmitter<string>();
+  @Output() cancel = new EventEmitter<void>();
 
-  onAddTask(){
-    
+  onCancel(){
+    this.cancel.emit();
   }
 }
